@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOMBRE ARTÍSTICO — Cantor de Tango</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Estilos personales -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+ 
+    <!-- ================================================
+         NAVBAR — Navegación principal
+         ================================================ -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar-principal">
+        <div class="container">
+ 
+            <!-- Logo / Nombre artístico -->
+            <a class="navbar-brand" href="#">NESTOR ESPINDOLA</a>
+ 
+            <!-- Botón hamburguesa para móvil -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+ 
+            <!-- Links de navegación -->
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#multimedia">Multimedia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+ 
+        </div>
+    </nav>
+ 
+ 
+    <!-- ================================================
+         HERO — Sección principal / portada
+         ================================================ -->
+    <section id="inicio" class="hero d-flex align-items-center">
+        <div class="container text-center">
+ 
+            <p class="hero-subtitulo">Cantor profesional.</p>
+            <h1 class="hero-titulo">Nestor Espindola</h1>
+            <p class="hero-descripcion">
+                Cantante profesional de tango y milongas.
+            </p>
+            <a href="#contacto" class="btn btn-rojo btn-lg mt-3">Contratame</a>
+ 
+        </div>
+    </section>
+ 
+ 
+    <!-- ================================================
+         SOBRE MÍ — Biografía y foto
+         ================================================ -->
+    <section id="sobre-mi" class="seccion">
+        <div class="container">
+            <div class="row align-items-center g-5">
+ 
+                <!-- Foto del artista -->
+                <div class="col-12 col-md-5 text-center">
+                    <img src="img/Nestor_cantando.jpeg"
+                         alt="Foto de NOMBRE ARTÍSTICO"
+                         class="foto-artista img-fluid">
+                </div>
+ 
+                <!-- Texto biográfico -->
+                <div class="col-12 col-md-7">
+                    <h2 class="seccion-titulo">Sobre mí</h2>
+                    <p>
+                        Actuaciónes en Argentina, Brasil, Chile, México, España (Barcelona), Australia (Melbourne y Sydney).
+                    </p>
+                    <p>
+                        En Montevideo:
+                        <ul>
+                            <li>Cafetin de Antaño</li>
+                            <li>La Cumparsita</li>
+                            <li>Sorocabana</li>
+                            <li>El mesón español</li>
+                            <li>Capa Cale</li>
+                            <li>Peluria</li>
+                            <li>Portofino</li>
+                        </ul>
+                        Y durante 16 años programando los espectaculos del Mercado de la Abundancia.
+                    </p>
+                </div>
+ 
+            </div>
+        </div>
+    </section>
+ 
+ 
+    <!-- ================================================
+         SERVICIOS — Qué ofrece
+         ================================================ -->
+    <section id="servicios" class="seccion seccion-oscura">
+        <div class="container">
+ 
+            <h2 class="seccion-titulo text-center mb-5">Servicios</h2>
+ 
+            <div class="row g-4 justify-content-center">
+ 
+                <!-- Tarjeta 1 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="tarjeta-servicio text-center h-100">
+                        <div class="tarjeta-icono">♪</div>
+                        <h3>Cenas y Eventos</h3>
+                        <p>Cenas de gala, cumpleaños, aniversarios, etc.</p>
+                    </div>
+                </div>
+ 
+                <!-- Tarjeta 2 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="tarjeta-servicio text-center h-100">
+                        <div class="tarjeta-icono">♪</div>
+                        <h3>Milongas y Peñas</h3>
+                        <p>Actuaciones en milongas, clubes de tango, peñas culturales.</p>
+                    </div>
+                </div>
+ 
+                <!-- Tarjeta 3 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="tarjeta-servicio text-center h-100">
+                        <div class="tarjeta-icono">♪</div>
+                        <h3>Shows Privados</h3>
+                        <p>Fiestas privadas, empresas, eventos corporativos o íntimos.</p>
+                    </div>
+                </div>
+ 
+            </div>
+        </div>
+    </section>
+ 
+ 
+    <!-- ================================================
+         MULTIMEDIA — Video y/o audio
+         ================================================ -->
+    <section id="multimedia" class="seccion">
+        <div class="container">
+ 
+            <h2 class="seccion-titulo text-center mb-5">Escuchalo cantar</h2>
+ 
+            <div class="row justify-content-center">
+ 
+                <!-- Embed de YouTube — reemplazá el SRC con el link real -->
+                <div class="col-12 col-lg-8">
+                    <div class="ratio ratio-16x9 video-wrapper">
+                        <iframe width="1840" height="1035" src="https://www.youtube.com/embed/xjTeMob6PHM?list=RDxjTeMob6PHM" title="Néstor Espíndola" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+ 
+            </div>
+        </div>
+    </section>
+ 
+ 
+    <!-- ================================================
+         CONTACTO — Teléfono, WhatsApp, formulario
+         ================================================ -->
+    <section id="contacto" class="seccion seccion-oscura">
+        <div class="container">
+ 
+            <h2 class="seccion-titulo text-center mb-5">Contacto</h2>
+ 
+            <div class="row g-4 justify-content-center">
+ 
+                <!-- Teléfono -->
+                <div class="col-12 col-sm-6 col-lg-3 text-center">
+                    <div class="tarjeta-contacto">
+                        <div class="contacto-icono">📞</div>
+                        <h4>Llamar</h4>
+                        <a href="tel:+59895592418" class="contacto-link">+54 9 11 0000-0000</a>
+                    </div>
+                </div>
+ 
+                <!-- WhatsApp -->
+                <div class="col-12 col-sm-6 col-lg-3 text-center">
+                    <div class="tarjeta-contacto">
+                        <div class="contacto-icono">💬</div>
+                        <h4>WhatsApp</h4>
+                        <a href="https://wa.me/59895592418?text=Hola,%20me%20gustaría%20contratarte%20mi%20nombre%20es:"
+                           target="_blank"
+                           class="contacto-link">Escribir por WhatsApp</a>
+                    </div>
+                </div>
+ 
+                <!-- Email (opcional, descomentá si lo usás) -->
+
+                <div class="col-12 col-sm-6 col-lg-3 text-center">
+                    <div class="tarjeta-contacto">
+                        <div class="contacto-icono">✉️</div>
+                        <h4>Email</h4>
+                        <a href="mailto:espindolanestor08@gmail.com" class="contacto-link">espindolanestor08@gmail.com</a>
+                    </div>
+                </div>
+
+ 
+            </div>
+ 
+        </div>
+    </section>
+ 
+ 
+    <!-- ================================================
+         FOOTER
+         ================================================ -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-1">Nestor Espindola — Cantor de Tango</p>
+            <p class="footer-sub">Alan Placeres © 2025 · Todos los derechos reservados.</p>
+            <p>Creador de la página.</p>
+        </div>
+    </footer>
+ 
+ 
+    <!-- Bootstrap JS (necesario para el menú hamburguesa) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+ 
+</body>
+</html>

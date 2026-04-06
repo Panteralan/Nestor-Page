@@ -1,0 +1,367 @@
+/* ================================================
+   VARIABLES — Paleta de colores y tipografía
+   ================================================ */
+:root {
+    --color-fondo:        #0d0d0d;
+    --color-fondo-medio:  #161616;
+    --color-fondo-claro:  #1e1e1e;
+    --color-rojo:         #c0392b;
+    --color-rojo-hover:   #a93226;
+    --color-dorado:       #b8960c;
+    --color-texto:        #e8e0d5;
+    --color-texto-suave:  #9e9386;
+    --color-borde:        #2e2e2e;
+ 
+    --fuente-titulo:      'Playfair Display', Georgia, serif;
+    --fuente-cuerpo:      'Lato', Arial, sans-serif;
+}
+ 
+/* ================================================
+   GOOGLE FONTS — Importar tipografías
+   ================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+ 
+ 
+/* ================================================
+   BASE
+   ================================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+html {
+    scroll-behavior: smooth;
+}
+ 
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-cuerpo);
+    font-size: 16px;
+    line-height: 1.7;
+}
+ 
+ 
+/* ================================================
+   NAVBAR
+   ================================================ */
+#navbar-principal {
+    background-color: rgba(13, 13, 13, 0.97);
+    border-bottom: 1px solid var(--color-borde);
+    padding: 1rem 0;
+}
+ 
+#navbar-principal .navbar-brand {
+    font-family: var(--fuente-titulo);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: var(--color-rojo) !important;
+}
+ 
+#navbar-principal .nav-link {
+    color: var(--color-texto) !important;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s;
+}
+ 
+#navbar-principal .nav-link:hover {
+    color: var(--color-rojo) !important;
+}
+ 
+ 
+/* ================================================
+   HERO
+   ================================================ */
+.hero {
+    min-height: 100vh;
+    background-color: var(--color-fondo);
+ 
+    /* Imagen de fondo — reemplazá la URL por tu foto o dejá el color sólido */
+    /* background-image: url('../img/fondo-hero.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+ 
+    position: relative;
+    padding: 6rem 1rem;
+}
+ 
+/* Línea decorativa roja sobre el hero */
+.hero::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-rojo);
+    margin: 0 auto 2rem;
+}
+ 
+.hero-subtitulo {
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-rojo);
+    margin-bottom: 1rem;
+}
+ 
+.hero-titulo {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    font-weight: 700;
+    color: var(--color-texto);
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+ 
+.hero-descripcion {
+    font-size: 1.15rem;
+    color: var(--color-texto-suave);
+    max-width: 520px;
+    margin: 0 auto;
+}
+ 
+ 
+/* ================================================
+   BOTÓN PRINCIPAL
+   ================================================ */
+.btn-rojo {
+    background-color: var(--color-rojo);
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 0.75rem 2.5rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+ 
+.btn-rojo:hover {
+    background-color: var(--color-rojo-hover);
+    color: #fff;
+    transform: translateY(-2px);
+}
+ 
+ 
+/* ================================================
+   SECCIONES — Base
+   ================================================ */
+.seccion {
+    padding: 5rem 1rem;
+    background-color: var(--color-fondo);
+}
+ 
+.seccion-oscura {
+    background-color: var(--color-fondo-medio);
+}
+ 
+.seccion-titulo {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--color-texto);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+ 
+/* Línea roja bajo el título de sección */
+.seccion-titulo::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-rojo);
+    margin-top: 0.5rem;
+}
+ 
+/* Centrar la línea cuando el título está centrado */
+.text-center .seccion-titulo::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+ 
+/* ================================================
+   SOBRE MÍ — Foto del artista
+   ================================================ */
+.foto-artista {
+    border: 3px solid var(--color-rojo);
+    max-width: 360px;
+    width: 100%;
+    filter: grayscale(20%);
+}
+ 
+ 
+/* ================================================
+   TARJETAS DE SERVICIOS
+   ================================================ */
+.tarjeta-servicio {
+    background-color: var(--color-fondo-claro);
+    border: 1px solid var(--color-borde);
+    border-top: 3px solid var(--color-rojo);
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s, border-color 0.3s;
+}
+ 
+.tarjeta-servicio:hover {
+    transform: translateY(-6px);
+    border-top-color: var(--color-dorado);
+}
+ 
+.tarjeta-servicio h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.3rem;
+    color: var(--color-texto);
+    margin-bottom: 0.75rem;
+}
+ 
+.tarjeta-servicio p {
+    color: var(--color-texto-suave);
+    font-size: 0.95rem;
+}
+ 
+.tarjeta-icono {
+    font-size: 2rem;
+    color: var(--color-rojo);
+    margin-bottom: 1rem;
+}
+ 
+ 
+/* ================================================
+   VIDEO
+   ================================================ */
+.video-wrapper {
+    border: 2px solid var(--color-borde);
+}
+ 
+ 
+/* ================================================
+   TARJETAS DE CONTACTO
+   ================================================ */
+.tarjeta-contacto {
+    background-color: var(--color-fondo-claro);
+    border: 1px solid var(--color-borde);
+    padding: 2rem 1rem;
+    transition: border-color 0.3s;
+}
+ 
+.tarjeta-contacto:hover {
+    border-color: var(--color-rojo);
+}
+ 
+.tarjeta-contacto h4 {
+    font-family: var(--fuente-titulo);
+    color: var(--color-texto);
+    margin-bottom: 0.5rem;
+}
+ 
+.contacto-icono {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+ 
+.contacto-link {
+    color: var(--color-rojo);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+ 
+.contacto-link:hover {
+    color: var(--color-dorado);
+    text-decoration: underline;
+}
+ 
+ 
+/* ================================================
+   FORMULARIO DE CONTACTO
+   ================================================ */
+.formulario-contacto .form-label {
+    color: var(--color-texto-suave);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+ 
+.formulario-contacto .form-control {
+    background-color: var(--color-fondo-claro);
+    border: 1px solid var(--color-borde);
+    color: var(--color-texto);
+    border-radius: 0;
+    padding: 0.75rem 1rem;
+}
+ 
+.formulario-contacto .form-control:focus {
+    background-color: var(--color-fondo-claro);
+    border-color: var(--color-rojo);
+    color: var(--color-texto);
+    box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.25);
+}
+ 
+.formulario-contacto .form-control::placeholder {
+    color: var(--color-texto-suave);
+    opacity: 0.6;
+}
+ 
+ 
+/* ================================================
+   FOOTER
+   ================================================ */
+.footer {
+    background-color: #080808;
+    border-top: 1px solid var(--color-borde);
+    padding: 2.5rem 1rem;
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+}
+ 
+.footer-sub {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-bottom: 0;
+}
+ 
+ 
+/* ================================================
+   RESPONSIVE — Ajustes por breakpoint
+   ================================================ */
+ 
+/* Tablet (768px y menos) */
+@media (max-width: 768px) {
+    .hero {
+        padding: 5rem 1rem;
+        text-align: center;
+    }
+ 
+    .seccion {
+        padding: 3.5rem 1rem;
+    }
+ 
+    .foto-artista {
+        max-width: 260px;
+        margin-bottom: 2rem;
+    }
+}
+ 
+/* Móvil (480px y menos) */
+@media (max-width: 480px) {
+    .hero-titulo {
+        font-size: 2.2rem;
+    }
+ 
+    .tarjeta-servicio,
+    .tarjeta-contacto {
+        padding: 1.5rem 1rem;
+    }
+ 
+    .btn-rojo {
+        width: 100%;
+    }
+}
+ 
